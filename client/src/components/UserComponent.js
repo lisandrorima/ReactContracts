@@ -17,6 +17,7 @@ class UserComponent extends React.Component{
         .then((res)=>res.json())
         .then((post)=>{
             this.setState({usuarios:post})
+            console.log(post)
         })
     }
     

@@ -5,13 +5,14 @@ import getWeb3 from "./getWeb3";
 import * as Utils from 'web3-utils';
 import UserComponent from './components/UserComponent';
 import RealEstateComp from './components/RealEstateComp';
+import SignIn from './components/SingIn.js'
 
 
 import "./App.css";
-import AltaPropiedadComp from "./components/AltaPropiedadComp";
+import AltaUsuarioComp from "./components/AltaUsuarioComp.js";
 
 class App extends Component {
-  state = { contratos: [], storageValue: 0, web3: null, accounts: null, contract: null };
+  state = { contratos: [], storageValue: 0, web3: null, accounts: null, contract: null};
 
   componentDidMount = async () => {
     try {
@@ -28,6 +29,7 @@ class App extends Component {
         Rental2.abi,
         deployedNetwork && deployedNetwork.address,
       );
+      
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
@@ -62,7 +64,6 @@ class App extends Component {
       })
     }
     console.log(this.state.contratos);
-
   };
 
   onSubmit = async event => {
@@ -75,36 +76,39 @@ class App extends Component {
     console.log(accounts[0]);
 
     //aca faltan params
-    await contract.methods.GenerateAlquiler( 
-      this.state._propietario,this.state._idPropiedad,this.state._montoDePago,
-      this.state.duracion,this.state._diasPago, this.state._cantidadPagos).send(
-      {
-      from:accounts[0],
-      _inquilino: accounts[0],
-      _propietario: this.state.value,
-      value: Utils.toWei(this.state._montoDePago, 'ether'),
-      _cantidadPagos: this.state.value,
-      _diasPago: this.state.value,
-      duracion: this.state.value,
-      _idPropiedad: this.state.value
-      })
+    await contract.methods.GenerateAlquiler(
+      this.state._propietario, this.state._idPropiedad, this.state._montoDePago,
+      this.state.duracion, this.state._diasPago, this.state._cantidadPagos).send(
+        {
+          from: accounts[0],
+          _inquilino: accounts[0],
+          _propietario: this.state.value,
+          value: Utils.toWei(this.state._montoDePago, 'ether'),
+          _cantidadPagos: this.state.value,
+          _diasPago: this.state.value,
+          duracion: this.state.value,
+          _idPropiedad: this.state.value
+        })
 
     this.setState({ message: 'You have been entered!' });
   };
+
 
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
+
       
       <div className="container">
-        <UserComponent/>
-        <RealEstateComp/>
-        <AltaPropiedadComp/>
+        <UserComponent />
+        <RealEstateComp />
+        <AltaUsuarioComp />
+        <SignIn></SignIn>
 
         <form onSubmit={this.onSubmit}>
-          
+
           <h4>Alquilar una propiedad mediante este formulario</h4>
           <div>
             <label>Id de la propiedad</label>
@@ -154,7 +158,10 @@ class App extends Component {
           )
         })}
 
+        
       </div>
+
+
     );
   }
 }
