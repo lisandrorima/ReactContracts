@@ -40,8 +40,6 @@ class AltaUsuarioComp extends Component {
   
 
 
-  openModal = () => this.setState({ isOpen: true });
-  closeModal = () => this.setState({ isOpen: false });
 
   handleSubmit = (event) => {
     alert('A form was submitted: ' + this.state.name);
