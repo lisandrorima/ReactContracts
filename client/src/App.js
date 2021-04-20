@@ -8,6 +8,7 @@ import RealEstateComp from './components/RealEstateComp';
 
 
 import "./App.css";
+import AltaPropiedadComp from "./components/AltaPropiedadComp";
 
 class App extends Component {
   state = { contratos: [], storageValue: 0, web3: null, accounts: null, contract: null };
@@ -100,6 +101,7 @@ class App extends Component {
       <div className="container">
         <UserComponent/>
         <RealEstateComp/>
+        <AltaPropiedadComp/>
 
         <form onSubmit={this.onSubmit}>
           
