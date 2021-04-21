@@ -10,6 +10,7 @@ import SignIn from './components/SingIn.js'
 
 import "./App.css";
 import AltaUsuarioComp from "./components/AltaUsuarioComp.js";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = { contratos: [], storageValue: 0, web3: null, accounts: null, contract: null};
@@ -101,11 +102,11 @@ class App extends Component {
     return (
 
       
-      <div className="container">
+      <div>
+        <Navbar/>
         <UserComponent />
         <RealEstateComp />
         <AltaUsuarioComp />
-        <SignIn></SignIn>
 
         <form onSubmit={this.onSubmit}>
 
