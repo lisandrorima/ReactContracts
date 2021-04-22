@@ -1,7 +1,7 @@
 import React from 'react';
 import RactDom from 'react-dom';
 
-const url = "https://localhost:44339/api/user"
+const url = "https://localhost:44339/api"
 
 class UserComponent extends React.Component{
     constructor(props){

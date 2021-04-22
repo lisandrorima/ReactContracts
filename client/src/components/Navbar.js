@@ -4,7 +4,7 @@ import { AppBar, Button, makeStyles, Toolbar, Typography } from '@material-ui/co
 const useStyles = makeStyles(theme => ({
     offset: theme.mixins.toolbar
 }))
-export class Navbar extends Component {
+class Navbar extends Component {
 
 
     render() {

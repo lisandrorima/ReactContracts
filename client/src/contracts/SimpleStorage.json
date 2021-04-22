@@ -29,16 +29,16 @@
       "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/E/SmartContractReact/ReactContracts/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/SmartContractReact/ReactContracts/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x0bb832597a33792c40bf13e050f0ee81a36e7030c99c60898fdf6aa9d4a473b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://65e4f736eca8b4628b6e0e1f42f6c6ae8414ecf5549ff4061444dc3a8503de9c\",\"dweb:/ipfs/QmVydoEdvN22emsH2FFA8DfEdyTP6bB5sDjdUbvjstreDT\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060c78061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea2646970667358221220011db0468bdc35f56c3384e8968b0a4ff83b0ef529cfc593980e6409025c4bc864736f6c634300060c0033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea2646970667358221220011db0468bdc35f56c3384e8968b0a4ff83b0ef529cfc593980e6409025c4bc864736f6c634300060c0033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Facundo/Documents/GitHub/ReactContracts/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Facundo/Documents/GitHub/ReactContracts/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x0bb832597a33792c40bf13e050f0ee81a36e7030c99c60898fdf6aa9d4a473b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://65e4f736eca8b4628b6e0e1f42f6c6ae8414ecf5549ff4061444dc3a8503de9c\",\"dweb:/ipfs/QmVydoEdvN22emsH2FFA8DfEdyTP6bB5sDjdUbvjstreDT\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c78061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea2646970667358221220a1df998ece552189542ecd16094736d020e5b163c39908b0eee710daa902ce9e64736f6c634300060c0033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea2646970667358221220a1df998ece552189542ecd16094736d020e5b163c39908b0eee710daa902ce9e64736f6c634300060c0033",
   "immutableReferences": {},
   "sourceMap": "69:186:2:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "69:186:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;119:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;180:72;;;:::i;:::-;;;;;;;;;;;;;;;;;;;119:55;167:1;154:10;:14;;;;119:55;:::o;180:72::-;216:4;236:10;;229:17;;180:72;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract SimpleStorage {\r\n  uint storedData;\r\n\r\n  function set(uint x) public {\r\n    storedData = x;\r\n  }\r\n\r\n  function get() public view returns (uint) {\r\n    return storedData;\r\n  }\r\n}\r\n",
-  "sourcePath": "E:/SmartContractReact/ReactContracts/contracts/SimpleStorage.sol",
+  "sourcePath": "C:/Users/Facundo/Documents/GitHub/ReactContracts/contracts/SimpleStorage.sol",
   "ast": {
-    "absolutePath": "/E/SmartContractReact/ReactContracts/contracts/SimpleStorage.sol",
+    "absolutePath": "/C/Users/Facundo/Documents/GitHub/ReactContracts/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         320
@@ -306,7 +306,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/E/SmartContractReact/ReactContracts/contracts/SimpleStorage.sol",
+      "absolutePath": "/C/Users/Facundo/Documents/GitHub/ReactContracts/contracts/SimpleStorage.sol",
       "exportedSymbols": {
         "SimpleStorage": [
           320
@@ -623,12 +623,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x63Bc5cDf5B8EdDb51bf090241DbA78b3e77D8045",
-      "transactionHash": "0xf5a0269efa12b4f065af360ea3553d4b9dd9aa25f52b1421490b8685b4e3ce73"
+      "address": "0xA2c0E7eE78Ab45553df53Ffe93cE4D5Fb0A1e548",
+      "transactionHash": "0x2878577d349b1af87d042be38a5507c6ba8fb5127565fc8d4d4dd45ff8a7f39e"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-20T13:36:54.384Z",
+  "updatedAt": "2021-04-22T22:56:31.606Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
