@@ -1,17 +1,13 @@
 import React, { Component } from "react";
+import { Navbar } from "./components/Navbar";
 import "./App.css";
-import AltaUsuarioComp from "./components/AltaUsuarioComp.js";
-import SmartComp from "./components/SmartComp";
 
 class App extends Component {
   
 
   render() {
-    return(
-      <div>
-        <AltaUsuarioComp/>
-        <SmartComp/>
-      </div>    
+    return(     
+        <Navbar/>        
     )
   }
 }

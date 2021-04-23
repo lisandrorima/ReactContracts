@@ -20,3 +20,72 @@
 .App-link {
   color: #09d3ac;
 }
+
+#header {
+  height: 100px;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  border-top: 5px solid #61dafb;
+}
+
+.center{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0px auto;
+}
+
+.clearfix{
+  clear:both;
+  float:none;
+}
+
+#logo {
+  display: flex;
+  width: 30%;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+#logo img {
+  height: 60px;
+  margin-top: -9px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+
+#brand {
+  margin: 0px;
+}
+
+#menu{
+  width: 70%;
+  font-size: 18px;
+}
+
+#menu ul{
+  display: flex;
+  line-height: 85px;
+  width: 60%;
+  float:right;
+}
+
+#menu ul li{
+  list-style: none;
+  height: 46px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#menu a{
+  text-decoration: none;
+  color: #444;
+  transition: 300ms all;
+}
+
+
+#menu a:hover{
+  color: #3cb2d3;
+}

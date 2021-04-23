@@ -1,23 +1,41 @@
 import React, { Component } from 'react';
-import { AppBar, Button, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import logo from './../assets/images/real-estate-logo.png'
 
-const useStyles = makeStyles(theme => ({
-    offset: theme.mixins.toolbar
-}))
-class Navbar extends Component {
+
+export class Navbar extends Component {
 
 
     render() {
         return (
             <div>
-                <AppBar position="static">
-                    <Toolbar>
-                        <Typography variant='h6'>
-                            SmartProp
-                    </Typography>
-                        <Button color="secondary">Log in</Button>
-                    </Toolbar>
-                </AppBar>
+                <header id="header">
+        <div className="center">
+
+            <div id="logo">
+                <img src={logo} className="app-logo" alt="Logotipo" />
+                <span id="brand">
+                    <strong>Smart</strong>Prop
+                </span>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Propiedades</a>
+                    </li>
+                    <li>
+                        <a href="#">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div className="clearfix"></div>
+        </div>
+    </header>
             </div>
         )
     }
