@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import {
-  Table, Button, Container, Modal,
-  ModalBody, ModalFooter, FormGroup, ModalHeader, Label
-} from 'reactstrap';
-import RactDom from 'react-dom';
 
 
 const url = "https://localhost:44339/api/register"
